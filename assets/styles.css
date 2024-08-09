@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 0.6fr 9fr 0.4fr;
+    grid-template-areas:
+    'header header'
+    'aside gallery'
+    'footer footer'
+    ;
+    height: 100vh;
+    width: 60%;
+    font-family: "Oswald", sans-serif;
+}
+
+/*header*/
+
+.header {
+    display: flex;
+    background-color:#009fa5;
+    color: white;
+    grid-area: header;
+    justify-content: start;
+    align-items: center;
+    padding-left: 6vh;
+}
+
+.header img{
+    width: 4vh;
+    padding: 1vh;
+}
+
+/* categorías*/
+
+.aside h3{
+    font-weight: 600;
+    padding: 2vh 0vh 1vh 3vh;
+    font-size: 2vh;
+    font-weight: 500;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    background-color:#e6e6e6;
+    grid-area: aside;
+}
+
+.list {
+    font-size: 2vh;
+    font-weight: 100;
+
+} 
+
+.category {
+    padding-left: 3vh;
+    color: #686969;
+}
+
+.category span {
+    color: #000000;
+    font-weight: 300;
+}
+
+.category:hover {
+    background-color: #9de0e2;
+}
+
+/*galeria*/
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color:#e6e6e6;
+    gap: 1.5vh;
+    padding: 2vh;
+    grid-area: gallery;
+}
+
+.card {
+    display: flex;
+    flex-direction: column ;
+    background-color: white;
+    width: 30vh;
+    height: 42vh;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.card img{
+    width: 25vh;
+    padding-top: 1vh;
+}
+
+
+.btn-comprar {
+    border: 0;
+    padding: 1vh;
+    width: 100%;
+    background-color:#009fa5;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-comprar:hover {
+    color: white;
+    transform: scaleY(1.2) translateY(-10%);
+}
+
+/*footer*/
+
+.footer {
+    display: flex;
+    background-color:#9de0e2;
+    grid-area: footer;
+    align-items: center;
+    justify-content: center; 
+}
